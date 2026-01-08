@@ -64,8 +64,14 @@ body {
 .nav-logo {
     font-size: 24px;
     font-weight: 700;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     color: var(--text-primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-logo:hover {
+    color: var(--accent);
 }
 
 .nav-menu {
