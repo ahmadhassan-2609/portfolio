@@ -1172,8 +1172,7 @@ body {
 }
 
 .certification-item:hover {
-    border-color: var(--accent);
-    box-shadow: 0 8px 24px rgba(93, 173, 226, 0.15);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
     transform: translateX(8px);
 }
 
