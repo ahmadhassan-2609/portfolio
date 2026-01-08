@@ -376,29 +376,6 @@ body {
 }
 
 
-.hero-baymax-visual {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.baymax-hero-image {
-    width: 380px;
-    height: auto;
-    opacity: 0.95;
-    filter: drop-shadow(0 20px 50px rgba(93, 173, 226, 0.25));
-    z-index: 2;
-    position: relative;
-    transition: transform 0.3s ease;
-}
-
-.baymax-hero-image:hover {
-    transform: scale(1.08);
-}
-
 .hero-decoration {
     position: absolute;
     width: 450px;
@@ -420,10 +397,6 @@ body {
     }
 }
 
-/* Removed animated grid */
-
-@media (max-width: 968px) {
-}
 
 /* Floating Icons */
 .floating-icons {
@@ -534,38 +507,6 @@ body {
     width: 100%;
     max-width: 350px;
 }
-
-.about-baymax-wrapper {
-    position: relative;
-    width: 300px;
-    height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, rgba(93, 173, 226, 0.05) 0%, rgba(93, 173, 226, 0.02) 100%);
-    border-radius: 20px;
-    border: 2px solid var(--border);
-    transition: all 0.4s ease;
-}
-
-.about-baymax-wrapper:hover {
-    border-color: var(--accent);
-    box-shadow: 0 15px 40px rgba(93, 173, 226, 0.15);
-    transform: translateY(-5px);
-}
-
-.baymax-about-image {
-    width: 240px;
-    height: auto;
-    opacity: 0.95;
-    filter: drop-shadow(0 15px 40px rgba(93, 173, 226, 0.2));
-    transition: transform 0.4s ease;
-}
-
-.baymax-about-image:hover {
-    transform: scale(1.08);
-}
-
 
 .about-intro {
     font-size: 20px;
