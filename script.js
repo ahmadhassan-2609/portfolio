@@ -114,6 +114,39 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// Video Modal Functions
+function openVideoModal(videoId) {
+    const modal = document.getElementById('videoModal');
+    const video = document.getElementById('videoPlayer');
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+    video.play();
+}
+
+function closeVideoModal() {
+    const modal = document.getElementById('videoModal');
+    const video = document.getElementById('videoPlayer');
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+    video.pause();
+    video.currentTime = 0;
+}
+
+// Close modal when clicking outside the video
+window.addEventListener('click', function(event) {
+    const modal = document.getElementById('videoModal');
+    if (event.target === modal) {
+        closeVideoModal();
+    }
+});
+
+// Close modal with Escape key
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        closeVideoModal();
+    }
+});
+
 // Add active state styling for nav links
 const style = document.createElement('style');
 style.textContent = `
