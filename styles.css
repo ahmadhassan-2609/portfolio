@@ -1798,6 +1798,23 @@ body {
     min-width: 0;
 }
 
+/* Deep RL card: full-width GIF row first, description + tags + links below (not side-by-side with media) */
+.project-main-content.project-layout-media-over-text {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    align-items: stretch;
+}
+
+.project-main-content.project-layout-media-over-text .project-video-container-small.project-triptych-container {
+    width: 100%;
+    max-width: 100%;
+}
+
+.project-main-content.project-layout-media-over-text .project-triptych-panel img {
+    height: 150px;
+}
+
 .project-content-left {
     display: flex;
     flex-direction: column;
