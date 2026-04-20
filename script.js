@@ -179,3 +179,9 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
+// Keep footer copyright year current automatically.
+const copyrightYear = document.getElementById('copyrightYear');
+if (copyrightYear) {
+    copyrightYear.textContent = new Date().getFullYear();
+}
+
