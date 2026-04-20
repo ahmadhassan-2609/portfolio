@@ -1500,10 +1500,6 @@ body {
         gap: 30px;
     }
 
-    .project-main-content {
-        grid-template-columns: 1fr;
-    }
-    
     .project-with-media {
         grid-template-columns: 1fr;
         gap: 30px;
@@ -1784,13 +1780,20 @@ body {
     margin-bottom: 70px;
 }
 
+/* Mobile-first: one column; desktop gets text + media side-by-side (see min-width rule below) */
 .project-main-content {
     display: grid;
-    grid-template-columns: 1fr 420px;
+    grid-template-columns: 1fr;
     gap: 50px;
     align-items: start;
     padding-bottom: 24px;
     border-bottom: 1px solid var(--border);
+}
+
+@media (min-width: 969px) {
+    .project-main-content {
+        grid-template-columns: 1fr 420px;
+    }
 }
 
 /* Lets the media column shrink so inner triptych stays 3-across instead of wrapping */
@@ -1804,6 +1807,7 @@ body {
     flex-direction: column;
     gap: 28px;
     align-items: stretch;
+    width: 100%;
 }
 
 .project-main-content.project-layout-media-over-text .project-video-container-small.project-triptych-container {
@@ -1811,8 +1815,8 @@ body {
     max-width: 100%;
 }
 
-.project-main-content.project-layout-media-over-text .project-triptych-panel img {
-    height: 150px;
+.project-main-content.project-layout-media-over-text .project-video-container-small.project-triptych-container .project-triptych-panel img {
+    height: 148px;
 }
 
 .project-content-left {
@@ -1877,35 +1881,32 @@ body {
     object-fit: contain;
 }
 
-/* Three MuJoCo demos in one horizontal row (table layout = always row, no accidental stacking) */
+/* Three MuJoCo demos in one horizontal row */
 .project-video-container-small.project-triptych-container {
     padding: 0;
     width: 100%;
     max-width: 100%;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
+    display: block;
 }
 
 .project-video-container-small.project-triptych-container .project-triptych {
-    display: table;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     width: 100%;
-    table-layout: fixed;
-    border-collapse: collapse;
-    border-spacing: 0;
+    gap: 0;
+    align-items: stretch;
 }
 
 .project-video-container-small.project-triptych-container .project-triptych-panel {
-    display: table-cell;
-    width: 33.33%;
-    vertical-align: top;
+    min-width: 0;
     line-height: 0;
     overflow: hidden;
 }
 
 .project-video-container-small.project-triptych-container .project-triptych-panel img {
     width: 100%;
-    height: 118px;
+    height: 128px;
     object-fit: cover;
     object-position: center center;
     display: block;
