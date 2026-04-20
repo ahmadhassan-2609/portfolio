@@ -1801,24 +1801,6 @@ body {
     min-width: 0;
 }
 
-/* Deep RL card: full-width GIF row first, description + tags + links below (not side-by-side with media) */
-.project-main-content.project-layout-media-over-text {
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
-    align-items: stretch;
-    width: 100%;
-}
-
-.project-main-content.project-layout-media-over-text .project-video-container-small.project-triptych-container {
-    width: 100%;
-    max-width: 100%;
-}
-
-.project-main-content.project-layout-media-over-text .project-video-container-small.project-triptych-container .project-triptych-panel img {
-    height: 148px;
-}
-
 .project-content-left {
     display: flex;
     flex-direction: column;
@@ -1910,17 +1892,6 @@ body {
     object-fit: cover;
     object-position: center center;
     display: block;
-}
-
-.project-triptych-caption {
-    margin: 0;
-    padding: 8px 10px 10px;
-    text-align: center;
-    font-size: 0.72rem;
-    color: var(--text-tertiary);
-    line-height: 1.35;
-    border-top: 1px solid var(--border);
-    background: var(--bg-tertiary);
 }
 
 .project-pdf-container {
